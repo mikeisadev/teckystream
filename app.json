@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "teckystream",
+    "name": "TeckyStream",
     "slug": "teckystream",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -19,7 +19,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.mikethedev.teckystream"
     },
     "web": {
       "bundler": "metro",
@@ -31,6 +32,11 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "e6da0561-097d-4226-b0c6-064974e8b1b2"
+      }
     }
   }
 }
