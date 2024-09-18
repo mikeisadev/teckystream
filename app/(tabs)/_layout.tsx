@@ -11,16 +11,22 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
+        // tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
+        tabBarActiveTintColor: Colors.light.tabIconSelected,
         headerShown: false,
         tabBarStyle: {
-          borderTopLeftRadius: 20,
-          borderTopRightRadius: 20,
+          borderTopLeftRadius: 0,
+          borderTopRightRadius: 0,
           borderWidth: 0,
-          height: 48,
-          padding:5,
+          height: 46,
+          paddingTop:5,
+          paddingBottom: 5,
           ...Colors.shadow,
+          backgroundColor: '#fff'
         }
+      }}
+      sceneContainerStyle={{
+        backgroundColor: 'transparent'
       }}
     >
       <Tabs.Screen
@@ -29,7 +35,7 @@ export default function TabLayout() {
           title: 'Home',
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
-          )
+          ),
         }}
       />
       <Tabs.Screen

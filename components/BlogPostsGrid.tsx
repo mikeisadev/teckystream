@@ -1,5 +1,7 @@
-import { Text, View, Image, StyleSheet } from "react-native"
+import { Text, View, Image, StyleSheet, ScrollView } from "react-native"
+
 import { Colors } from "@/constants/Colors"
+import Title from "./Title"
 
 type BlogPostsGridType = { data: Object[] }
 
@@ -16,7 +18,7 @@ export default function BlogPostsGrid({ data }: BlogPostsGridType) {
                         <Image style={styles.img} source={{uri: img}}/>
                     </View>
                     <View style={styles.cardMeta}>
-                        <Text>{v.title.rendered}</Text>
+                        <Title size={15} margin={0} weight={500}>{v.title.rendered}</Title>
                     </View>
                 </View>
             )
@@ -31,6 +33,7 @@ const styles = StyleSheet.create({
         display: 'flex',
         flexDirection: 'column',
         gap: 10,
+        overflow: 'scroll'
     },
     card: {
         backgroundColor: '#fff',

@@ -1,6 +1,7 @@
 import React from "react";
 import { View, StyleSheet, type ViewProps } from "react-native";
 import { useThemeColor } from '@/hooks/useThemeColor';
+import { Colors } from "@/constants/Colors";
 
 export type RegularViewProps = ViewProps & {
   lightColor?: string;
@@ -8,13 +9,15 @@ export type RegularViewProps = ViewProps & {
 }
 
 export default function ThemedView({ style, lightColor, darkColor, children }: RegularViewProps) {
-  const bgColor = useThemeColor({ light: lightColor, dark: darkColor }, 'background')
+  // const backgroundColor = useThemeColor({ light: lightColor, dark: darkColor }, 'background')
+  const backgroundColor = Colors.light.background
 
-  return <View style={[{backgroundColor: bgColor}, styles.RegularView, style]}>{children}</View>
+  return <View style={[{backgroundColor}, styles.RegularView, style]}>{children}</View>
 }
 
 const styles = StyleSheet.create({
   RegularView: {
-    padding: 10
+    padding: 10,
+    height: Colors.dimensions.window.height
   }
 })

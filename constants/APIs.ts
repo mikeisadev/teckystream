@@ -8,7 +8,9 @@ export const apiBaseUrl: string = `${baseURL}${apiNamespace}`
 
 export const APIs = {
     data: {
-        blogPosts: apiBaseUrl + 'posts'
+        blogPosts: apiBaseUrl + 'posts',
+        blogPostsSearch: apiBaseUrl + 'posts' + '?s=',
+        products: baseURL + '/wp-json/ts/v1/products'
     },
     user: {
 
