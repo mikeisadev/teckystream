@@ -2,4 +2,4 @@
 
 Developed by Michele Mincone in June 2024 with React Native
 
-Main branch
+V1.0 Branch
